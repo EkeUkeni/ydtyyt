@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title == "create" %}Create Todo{% else %}Update Todo{% endif %}</title>
+</head>
+<body>
+    <h2>{% if title == "create" %}Create Todo{% else %}Update Todo{% endif %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <!-- {{form.title.label}}
+        {{form.title}}
+
+        {{form.description.label}}
+        {{form.description}}
+
+        {{form.complete.label}}
+        {{form.complete}} -->
+
+        <!-- <label for="title">Title</label>
+        <input type="text" name="title" id="id_title"><br>
+
+        <label for="title">Description</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <label for="title">Created_at</label>
+        <input type="date" name="title" id="id_title">
+
+        <label for="title">updated_at</label>
+        <input type="date" name="title" id="id_title">
+
+        <label for="title">complete</label>
+        <input type="checkbox" name="title" id="id_title"> -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
